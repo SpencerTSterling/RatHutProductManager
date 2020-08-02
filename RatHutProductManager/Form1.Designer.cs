@@ -1,6 +1,7 @@
-﻿namespace RatHutProductManager
+﻿using System.Windows.Forms;
+namespace RatHutProductManager
 {
-    partial class Form1
+    partial class Form1 : Form
     {
         /// <summary>
         /// Required designer variable.
