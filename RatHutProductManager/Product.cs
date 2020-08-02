@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,11 +10,12 @@ namespace RatHutProductManager
     /// <summary>
     /// Represents an individual menu item at RutHut
     /// </summary>
-    class Product
+    public class Product
     {
         /// <summary>
         /// Unique Id number for each product
         /// </summary>
+        [Key]
         public int ProductId { get; set; }
         /// <summary>
         /// Title for the product for customers
