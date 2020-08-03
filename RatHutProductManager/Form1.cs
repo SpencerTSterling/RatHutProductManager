@@ -16,5 +16,20 @@ namespace RatHutProductManager
         {
             InitializeComponent();
         }
+
+        private void BtnAddProduct_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

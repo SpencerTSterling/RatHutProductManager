@@ -61,6 +61,7 @@ namespace RatHutProductManager
             this.BtnAddProduct.TabIndex = 2;
             this.BtnAddProduct.Text = "Add Product";
             this.BtnAddProduct.UseVisualStyleBackColor = true;
+            this.BtnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
             // 
             // BtnUpdateProduct
             // 
@@ -70,6 +71,7 @@ namespace RatHutProductManager
             this.BtnUpdateProduct.TabIndex = 3;
             this.BtnUpdateProduct.Text = "Update Product";
             this.BtnUpdateProduct.UseVisualStyleBackColor = true;
+            this.BtnUpdateProduct.Click += new System.EventHandler(this.BtnUpdateProduct_Click);
             // 
             // BtnDeleteProduct
             // 
@@ -79,6 +81,7 @@ namespace RatHutProductManager
             this.BtnDeleteProduct.TabIndex = 4;
             this.BtnDeleteProduct.Text = "Delete Product";
             this.BtnDeleteProduct.UseVisualStyleBackColor = true;
+            this.BtnDeleteProduct.Click += new System.EventHandler(this.BtnDeleteProduct_Click);
             // 
             // Form1
             // 
