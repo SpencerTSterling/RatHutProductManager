@@ -42,6 +42,17 @@ namespace RatHutProductManager
             //};
             //ProductDb.Add(p);
 
+            // Testing out Update method
+            //Product p = new Product()
+            //{
+            //    Title = "Hamburger",
+            //    Price = 9.99
+            //};
+            //ProductDb.Add(p);
+
+            //p.Price = 15.00;
+            //ProductDb.Update(p);
+
          
 
         }
