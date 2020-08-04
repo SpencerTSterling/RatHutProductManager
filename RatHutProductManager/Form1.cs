@@ -19,12 +19,14 @@ namespace RatHutProductManager
 
         private void BtnAddProduct_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            AddForm addForm = new AddForm();
+            addForm.ShowDialog();
         }
 
         private void BtnUpdateProduct_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            UpdateForm updateForm = new UpdateForm();
+            updateForm.ShowDialog();
         }
 
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
@@ -54,6 +56,11 @@ namespace RatHutProductManager
             //ProductDb.Update(p);
 
          
+
+        }
+
+        private void LbProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

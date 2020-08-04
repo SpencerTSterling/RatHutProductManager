@@ -43,6 +43,7 @@ namespace RatHutProductManager
             this.LbProducts.Name = "LbProducts";
             this.LbProducts.Size = new System.Drawing.Size(137, 186);
             this.LbProducts.TabIndex = 0;
+            this.LbProducts.SelectedIndexChanged += new System.EventHandler(this.LbProducts_SelectedIndexChanged);
             // 
             // label1
             // 
