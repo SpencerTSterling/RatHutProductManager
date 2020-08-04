@@ -31,7 +31,29 @@ namespace RatHutProductManager
 
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if ( LbProducts.SelectedIndex < 0)
+            {
+                MessageBox.Show("You must choose a product to delete");
+                return;
+            }
+
+            Product prod = LbProducts.SelectedItem as Product;
+            DialogResult result = MessageBox.Show($"Are you sure you want to delete {prod.Title}?", "Delete?",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    ProductDb.Delete(prod);
+                    LbProducts.Items.Remove(prod);
+                }
+                catch
+                {
+                    MessageBox.Show("Try again");
+                }
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,7 +63,7 @@ namespace RatHutProductManager
             //Populates the listbox with the products
             foreach (Product product in allProducts)
             {
-                LbProducts.Items.Add(product.ToString());
+                LbProducts.Items.Add(product);
             }
 
             // Testing out Add method
