@@ -33,5 +33,14 @@ namespace RatHutProductManager
         /// Categories for products include Burgers, Chicken, Breakfast, Sides, and Dessert
         /// </summary>
         public string Category { get; set; }
+
+        /// <summary>
+        /// Returns the product's title
+        /// </summary>
+        /// <returns>Product Title</returns>
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 }
