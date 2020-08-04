@@ -16,7 +16,12 @@ namespace RatHutProductManager
         /// <returns></returns>
         public static Product Add(Product p)
         {
-            throw new NotImplementedException();
+            using ( ProductContext context = new ProductContext())
+            {
+                context.Products.Add(p);
+                context.SaveChanges();
+                return p;
+            }
         }
         /// <summary>
         /// Deletes product from the database
