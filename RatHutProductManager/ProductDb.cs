@@ -38,7 +38,12 @@ namespace RatHutProductManager
         /// <returns></returns>
         public static Product Update(Product p)
         {
-            throw new NotImplementedException();
+            using( ProductContext context = new ProductContext())
+            {
+                context.Entry(p).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+                return p;
+            }
         }
         /// <summary>
         /// Gets a list of all products in the database
