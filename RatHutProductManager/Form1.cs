@@ -31,5 +31,19 @@ namespace RatHutProductManager
         {
             throw new NotImplementedException();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Testing out Add method
+            //Product p = new Product()
+            //{
+            //    Title = "Burger",
+            //    Price = 9.99
+            //};
+            //ProductDb.Add(p);
+
+         
+
+        }
     }
 }
