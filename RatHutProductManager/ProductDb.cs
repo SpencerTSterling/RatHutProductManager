@@ -57,7 +57,14 @@ namespace RatHutProductManager
         /// <returns></returns>
         public static List<Product> GetAllProducts()
         {
-            throw new NotImplementedException();
+            using (ProductContext context = new ProductContext())
+            {
+                List<Product> allProduct =
+                    (from prod in context.Products
+                     select prod).ToList();
+
+                return allProduct;
+            };
         }
         /// <summary>
         /// Deletes product according to ProductId
