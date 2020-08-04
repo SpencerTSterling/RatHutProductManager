@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace RatHutProductManager
 {
-    public partial class AddForm : Form
+    public partial class AddAndUpdateForm : Form
     {
-        public AddForm()
+        public AddAndUpdateForm()
         {
             InitializeComponent();
+        }
+
+        private void AddAndUpdateForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
