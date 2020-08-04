@@ -41,6 +41,8 @@
             this.RbCatSides = new System.Windows.Forms.RadioButton();
             this.RbCatDessert = new System.Windows.Forms.RadioButton();
             this.RbCatMisc = new System.Windows.Forms.RadioButton();
+            this.BtnAddToDB = new System.Windows.Forms.Button();
+            this.BtnCancel = new System.Windows.Forms.Button();
             this.GbProductCategory.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,11 +176,33 @@
             this.RbCatMisc.Text = "Misc";
             this.RbCatMisc.UseVisualStyleBackColor = true;
             // 
+            // BtnAddToDB
+            // 
+            this.BtnAddToDB.Location = new System.Drawing.Point(159, 11);
+            this.BtnAddToDB.Name = "BtnAddToDB";
+            this.BtnAddToDB.Size = new System.Drawing.Size(75, 23);
+            this.BtnAddToDB.TabIndex = 7;
+            this.BtnAddToDB.Text = "Add";
+            this.BtnAddToDB.UseVisualStyleBackColor = true;
+            this.BtnAddToDB.Click += new System.EventHandler(this.BtnAddToDB_Click);
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.Location = new System.Drawing.Point(159, 36);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancel.TabIndex = 8;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
             // AddAndUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 355);
+            this.Controls.Add(this.BtnCancel);
+            this.Controls.Add(this.BtnAddToDB);
             this.Controls.Add(this.GbProductCategory);
             this.Controls.Add(this.TxtProductDesc);
             this.Controls.Add(this.TxtProductPrice);
@@ -211,5 +235,7 @@
         private System.Windows.Forms.RadioButton RbCatBreakfast;
         private System.Windows.Forms.RadioButton RbCatChickenSand;
         private System.Windows.Forms.RadioButton RbCatBurgers;
+        private System.Windows.Forms.Button BtnAddToDB;
+        private System.Windows.Forms.Button BtnCancel;
     }
 }

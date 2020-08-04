@@ -21,5 +21,15 @@ namespace RatHutProductManager
         {
 
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnAddToDB_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
