@@ -34,6 +34,14 @@ namespace RatHutProductManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Get a list of all products from the database
+            List<Product> allProducts = ProductDb.GetAllProducts();
+            //Populates the listbox with the products
+            foreach (Product product in allProducts)
+            {
+                LbProducts.Items.Add(product.ToString());
+            }
+
             // Testing out Add method
             //Product p = new Product()
             //{
