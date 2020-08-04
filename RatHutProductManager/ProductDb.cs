@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
@@ -24,7 +25,12 @@ namespace RatHutProductManager
         /// <param name="p"></param>
         public static void Delete(Product p)
         {
-            throw new NotImplementedException();
+            using (ProductContext context = new ProductContext())
+            {
+                context.Database.Log = Console.WriteLine;
+                context.Entry(p).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
         }
         /// <summary>
         /// Updates or modifies a product already in the database
