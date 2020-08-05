@@ -25,8 +25,14 @@ namespace RatHutProductManager
 
         private void BtnUpdateProduct_Click(object sender, EventArgs e)
         {
-            AddAndUpdateForm updateForm = new AddAndUpdateForm();
-            updateForm.ShowDialog();
+            if (LbProducts.SelectedIndex < 0)
+            {
+                MessageBox.Show("You must choose a product to Update");
+                return;
+            }
+            Product selPro = LbProducts.SelectedItem as Product;
+            var updateFrm = new AddAndUpdateForm(selPro);
+            updateFrm.ShowDialog();
         }
 
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
