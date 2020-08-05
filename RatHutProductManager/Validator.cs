@@ -26,5 +26,24 @@ namespace RatHutProductManager
             }
         }
 
+        /// <summary>
+        /// An input is passed into IsInt32, returns true if the input
+        /// is successfully converted to an Int32. Otherwise false.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool IsInt32(string input)
+        {
+            try
+            {
+                Convert.ToInt32(input);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
