@@ -19,13 +19,13 @@ namespace RatHutProductManager
 
         private void BtnAddProduct_Click(object sender, EventArgs e)
         {
-            AddForm addForm = new AddForm();
+            AddAndUpdateForm addForm = new AddAndUpdateForm();
             addForm.ShowDialog();
         }
 
         private void BtnUpdateProduct_Click(object sender, EventArgs e)
         {
-            UpdateForm updateForm = new UpdateForm();
+            AddAndUpdateForm updateForm = new AddAndUpdateForm();
             updateForm.ShowDialog();
         }
 
