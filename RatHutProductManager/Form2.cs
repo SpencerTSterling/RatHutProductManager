@@ -54,9 +54,12 @@ namespace RatHutProductManager
             }
             #endregion
 
+            Product prod = new Product();
 
-
-
+            prod.Title = TxtProductTitle.Text;
+            prod.Price = Convert.ToDouble(TxtProductPrice.Text);
+            prod.Description = TxtProductDesc.Text;
+            prod.Category = GbProductCategory.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
         }
     }
 }
