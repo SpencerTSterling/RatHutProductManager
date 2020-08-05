@@ -60,6 +60,10 @@ namespace RatHutProductManager
             prod.Price = Convert.ToDouble(TxtProductPrice.Text);
             prod.Description = TxtProductDesc.Text;
             prod.Category = GbProductCategory.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+
+            ProductDb.Add(prod);
+
+            Close();
         }
     }
 }
