@@ -3,10 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RatHutProductManager
 {
     static class Validator
     {
+        /// <summary>
+        /// A textbox is passed into IsPresent, returns true if 
+        /// the textbox is not null or whitespace
+        /// </summary>
+        /// <param name="box"></param>
+        /// <returns></returns>
+        public static bool IsPresent(TextBox box)
+        {
+            if ( string.IsNullOrWhiteSpace(box.Text) )
+            {
+                return false;
+            } else
+            {
+                return true;
+            }
+        }
+
     }
 }
