@@ -32,11 +32,11 @@ namespace RatHutProductManager
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static bool IsInt32(string input)
+        public static bool IsNumber(string input)
         {
             try
             {
-                Convert.ToInt32(input);
+                Convert.ToDouble(input);
                 return true;
             }
             catch
