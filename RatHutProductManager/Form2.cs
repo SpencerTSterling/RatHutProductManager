@@ -72,7 +72,7 @@ namespace RatHutProductManager
                 MessageBox.Show("Please input a title and description for your product");
             }
 
-            if ( !Validator.IsInt32(TxtProductPrice.Text))
+            if ( !Validator.IsNumber(TxtProductPrice.Text))
             {
                 MessageBox.Show("Please input a numerial value for the price");
             }
