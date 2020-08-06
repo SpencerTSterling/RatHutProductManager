@@ -21,6 +21,17 @@ namespace RatHutProductManager
         {
             AddAndUpdateForm addForm = new AddAndUpdateForm();
             addForm.ShowDialog();
+            RepopluateListBox();
+
+        }
+
+        private void RepopluateListBox()
+        {
+            List<Product> allProducts = ProductDb.GetAllProducts();
+            foreach (Product product in allProducts)
+            {
+                LbProducts.Items.Add(product);
+            }
         }
 
         private void BtnUpdateProduct_Click(object sender, EventArgs e)
