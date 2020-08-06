@@ -27,6 +27,7 @@ namespace RatHutProductManager
 
         private void RepopluateListBox()
         {
+            LbProducts.Items.Clear();
             List<Product> allProducts = ProductDb.GetAllProducts();
             foreach (Product product in allProducts)
             {
