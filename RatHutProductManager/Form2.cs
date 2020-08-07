@@ -66,15 +66,18 @@ namespace RatHutProductManager
         {
             // Make sure all inputs on forms are valid 
             #region Validation
+            bool isValid = true;
             if (!Validator.IsPresent(TxtProductTitle) ||
                 !Validator.IsPresent(TxtProductDesc))
             {
                 MessageBox.Show("Please input a title and description for your product");
+                isValid = false;
             }
 
             if ( !Validator.IsNumber(TxtProductPrice.Text))
             {
                 MessageBox.Show("Please input a numerial value for the price");
+                isValid = false;
             }
 
                 // if none of the buttons are clicked, give error
@@ -86,6 +89,10 @@ namespace RatHutProductManager
                  !RbCatMisc.Checked)
             {
                 MessageBox.Show("Please choose a category for the product");
+                isValid = false;
+            }
+            if (!isValid)
+            {
                 return;
             }
             #endregion
