@@ -35,12 +35,12 @@
             this.TxtProductPrice = new System.Windows.Forms.TextBox();
             this.TxtProductDesc = new System.Windows.Forms.TextBox();
             this.GbProductCategory = new System.Windows.Forms.GroupBox();
-            this.RbCatBurgers = new System.Windows.Forms.RadioButton();
-            this.RbCatChickenSand = new System.Windows.Forms.RadioButton();
-            this.RbCatBreakfast = new System.Windows.Forms.RadioButton();
-            this.RbCatSides = new System.Windows.Forms.RadioButton();
-            this.RbCatDessert = new System.Windows.Forms.RadioButton();
             this.RbCatMisc = new System.Windows.Forms.RadioButton();
+            this.RbCatDessert = new System.Windows.Forms.RadioButton();
+            this.RbCatSides = new System.Windows.Forms.RadioButton();
+            this.RbCatBreakfast = new System.Windows.Forms.RadioButton();
+            this.RbCatChickenSand = new System.Windows.Forms.RadioButton();
+            this.RbCatBurgers = new System.Windows.Forms.RadioButton();
             this.BtnAddToDB = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.GbProductCategory.SuspendLayout();
@@ -110,49 +110,16 @@
             this.GbProductCategory.TabStop = false;
             this.GbProductCategory.Text = "Category";
             // 
-            // RbCatBurgers
+            // RbCatMisc
             // 
-            this.RbCatBurgers.AutoSize = true;
-            this.RbCatBurgers.Location = new System.Drawing.Point(6, 19);
-            this.RbCatBurgers.Name = "RbCatBurgers";
-            this.RbCatBurgers.Size = new System.Drawing.Size(61, 17);
-            this.RbCatBurgers.TabIndex = 0;
-            this.RbCatBurgers.TabStop = true;
-            this.RbCatBurgers.Text = "Burgers";
-            this.RbCatBurgers.UseVisualStyleBackColor = true;
-            // 
-            // RbCatChickenSand
-            // 
-            this.RbCatChickenSand.AutoSize = true;
-            this.RbCatChickenSand.Location = new System.Drawing.Point(6, 42);
-            this.RbCatChickenSand.Name = "RbCatChickenSand";
-            this.RbCatChickenSand.Size = new System.Drawing.Size(133, 17);
-            this.RbCatChickenSand.TabIndex = 1;
-            this.RbCatChickenSand.TabStop = true;
-            this.RbCatChickenSand.Text = "Chicken/Sandwhiches";
-            this.RbCatChickenSand.UseVisualStyleBackColor = true;
-            // 
-            // RbCatBreakfast
-            // 
-            this.RbCatBreakfast.AutoSize = true;
-            this.RbCatBreakfast.Location = new System.Drawing.Point(6, 65);
-            this.RbCatBreakfast.Name = "RbCatBreakfast";
-            this.RbCatBreakfast.Size = new System.Drawing.Size(70, 17);
-            this.RbCatBreakfast.TabIndex = 2;
-            this.RbCatBreakfast.TabStop = true;
-            this.RbCatBreakfast.Text = "Breakfast";
-            this.RbCatBreakfast.UseVisualStyleBackColor = true;
-            // 
-            // RbCatSides
-            // 
-            this.RbCatSides.AutoSize = true;
-            this.RbCatSides.Location = new System.Drawing.Point(6, 88);
-            this.RbCatSides.Name = "RbCatSides";
-            this.RbCatSides.Size = new System.Drawing.Size(51, 17);
-            this.RbCatSides.TabIndex = 3;
-            this.RbCatSides.TabStop = true;
-            this.RbCatSides.Text = "Sides";
-            this.RbCatSides.UseVisualStyleBackColor = true;
+            this.RbCatMisc.AutoSize = true;
+            this.RbCatMisc.Location = new System.Drawing.Point(6, 134);
+            this.RbCatMisc.Name = "RbCatMisc";
+            this.RbCatMisc.Size = new System.Drawing.Size(47, 17);
+            this.RbCatMisc.TabIndex = 5;
+            this.RbCatMisc.TabStop = true;
+            this.RbCatMisc.Text = "Misc";
+            this.RbCatMisc.UseVisualStyleBackColor = true;
             // 
             // RbCatDessert
             // 
@@ -165,16 +132,49 @@
             this.RbCatDessert.Text = "Dessert";
             this.RbCatDessert.UseVisualStyleBackColor = true;
             // 
-            // RbCatMisc
+            // RbCatSides
             // 
-            this.RbCatMisc.AutoSize = true;
-            this.RbCatMisc.Location = new System.Drawing.Point(6, 134);
-            this.RbCatMisc.Name = "RbCatMisc";
-            this.RbCatMisc.Size = new System.Drawing.Size(47, 17);
-            this.RbCatMisc.TabIndex = 5;
-            this.RbCatMisc.TabStop = true;
-            this.RbCatMisc.Text = "Misc";
-            this.RbCatMisc.UseVisualStyleBackColor = true;
+            this.RbCatSides.AutoSize = true;
+            this.RbCatSides.Location = new System.Drawing.Point(6, 88);
+            this.RbCatSides.Name = "RbCatSides";
+            this.RbCatSides.Size = new System.Drawing.Size(51, 17);
+            this.RbCatSides.TabIndex = 3;
+            this.RbCatSides.TabStop = true;
+            this.RbCatSides.Text = "Sides";
+            this.RbCatSides.UseVisualStyleBackColor = true;
+            // 
+            // RbCatBreakfast
+            // 
+            this.RbCatBreakfast.AutoSize = true;
+            this.RbCatBreakfast.Location = new System.Drawing.Point(6, 65);
+            this.RbCatBreakfast.Name = "RbCatBreakfast";
+            this.RbCatBreakfast.Size = new System.Drawing.Size(70, 17);
+            this.RbCatBreakfast.TabIndex = 2;
+            this.RbCatBreakfast.TabStop = true;
+            this.RbCatBreakfast.Text = "Breakfast";
+            this.RbCatBreakfast.UseVisualStyleBackColor = true;
+            // 
+            // RbCatChickenSand
+            // 
+            this.RbCatChickenSand.AutoSize = true;
+            this.RbCatChickenSand.Location = new System.Drawing.Point(6, 42);
+            this.RbCatChickenSand.Name = "RbCatChickenSand";
+            this.RbCatChickenSand.Size = new System.Drawing.Size(127, 17);
+            this.RbCatChickenSand.TabIndex = 1;
+            this.RbCatChickenSand.TabStop = true;
+            this.RbCatChickenSand.Text = "Chicken/Sandwiches";
+            this.RbCatChickenSand.UseVisualStyleBackColor = true;
+            // 
+            // RbCatBurgers
+            // 
+            this.RbCatBurgers.AutoSize = true;
+            this.RbCatBurgers.Location = new System.Drawing.Point(6, 19);
+            this.RbCatBurgers.Name = "RbCatBurgers";
+            this.RbCatBurgers.Size = new System.Drawing.Size(61, 17);
+            this.RbCatBurgers.TabIndex = 0;
+            this.RbCatBurgers.TabStop = true;
+            this.RbCatBurgers.Text = "Burgers";
+            this.RbCatBurgers.UseVisualStyleBackColor = true;
             // 
             // BtnAddToDB
             // 
