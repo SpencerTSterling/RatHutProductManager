@@ -86,18 +86,27 @@ namespace RatHutProductManager
                  !RbCatMisc.Checked)
             {
                 MessageBox.Show("Please choose a category for the product");
+                return;
             }
             #endregion
+            if (updProduct == null) {
+                Product prod = new Product();
 
-            Product prod = new Product();
+                prod.Title = TxtProductTitle.Text;
+                prod.Price = Convert.ToDouble(TxtProductPrice.Text);
+                prod.Description = TxtProductDesc.Text;
+                prod.Category = GbProductCategory.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
 
-            prod.Title = TxtProductTitle.Text;
-            prod.Price = Convert.ToDouble(TxtProductPrice.Text);
-            prod.Description = TxtProductDesc.Text;
-            prod.Category = GbProductCategory.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
-
-            ProductDb.Add(prod);
-
+                ProductDb.Add(prod);
+            }
+            else
+            {
+                updProduct.Title = TxtProductTitle.Text;
+                updProduct.Price = Convert.ToDouble(TxtProductPrice.Text);
+                updProduct.Description = TxtProductDesc.Text;
+                updProduct.Category = GbProductCategory.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+                ProductDb.Update(updProduct);
+            }
             Close();
         }
     }
