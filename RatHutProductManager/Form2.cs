@@ -86,6 +86,7 @@ namespace RatHutProductManager
                  !RbCatMisc.Checked)
             {
                 MessageBox.Show("Please choose a category for the product");
+                return;
             }
             #endregion
             if (updProduct == null) {
