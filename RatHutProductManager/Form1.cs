@@ -45,6 +45,7 @@ namespace RatHutProductManager
             Product selPro = LbProducts.SelectedItem as Product;
             var updateFrm = new AddAndUpdateForm(selPro);
             updateFrm.ShowDialog();
+            RepopluateListBox();
         }
 
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
