@@ -74,5 +74,18 @@ namespace RatHutProductManager
         {
             throw new NotImplementedException();
         }
+
+        public static List<Product> SortAlphabetically()
+        {
+            using(ProductContext context = new ProductContext())
+            {
+                List<Product> products =
+                    (from prod in context.Products
+                     orderby prod.Title ascending
+                     select prod).ToList();
+
+                return products;
+            };
+        }
     }
 }

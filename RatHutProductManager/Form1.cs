@@ -34,6 +34,18 @@ namespace RatHutProductManager
                 LbProducts.Items.Add(product);
             }
         }
+        /// <summary>
+        /// Takes in a list and puts it in the listbox
+        /// </summary>
+        /// <param name="allProducts"></param>
+        private void RepopulateListBox(List<Product> allProducts)
+        {
+            LbProducts.Items.Clear();
+            foreach(Product product in allProducts)
+            {
+                LbProducts.Items.Add(product);
+            }
+        }
 
         private void BtnUpdateProduct_Click(object sender, EventArgs e)
         {
@@ -139,6 +151,8 @@ namespace RatHutProductManager
                 // alphabetical
                 case 4:
                     // call method
+                    List<Product> products = ProductDb.SortAlphabetically();
+                    RepopulateListBox(products);
                     break;
 
             }
