@@ -21,11 +21,11 @@ namespace RatHutProductManager
         {
             AddAndUpdateForm addForm = new AddAndUpdateForm();
             addForm.ShowDialog();
-            RepopluateListBox();
+            RepopulateListBox();
 
         }
 
-        private void RepopluateListBox()
+        private void RepopulateListBox()
         {
             LbProducts.Items.Clear();
             List<Product> allProducts = ProductDb.GetAllProducts();
@@ -57,7 +57,7 @@ namespace RatHutProductManager
             Product selPro = LbProducts.SelectedItem as Product;
             var updateFrm = new AddAndUpdateForm(selPro);
             updateFrm.ShowDialog();
-            RepopluateListBox();
+            RepopulateListBox();
         }
 
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
@@ -169,9 +169,24 @@ namespace RatHutProductManager
             
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void DdSortByCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DdSortByCondition_SelectedIndexChanged(sender, e);
+            //Runs if item selected is ALL
+            if (DdSortByCategory.SelectedIndex != 0) {
+                List<Product> products = GetListBoxItems();
+                List<Product> pSorted = new List<Product>();
+                string category = DdSortByCategory.SelectedItem as string;
+                int size = products.Count();
+                for (int i = 0; i < size - 1; i++)
+                {
+                    if (products[i].Category.Equals(category))
+                    {
+                        pSorted.Add(products[i]);
+                    }
+                }
+                RepopulateListBox(pSorted);
+            }
         }
 
         private List<Product> GetListBoxItems()
