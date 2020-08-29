@@ -40,7 +40,7 @@ namespace RatHutProductManager
         /// <returns>Product Title</returns>
         public override string ToString()
         {
-            return Title;
+            return Title + " - " +Price;
         }
     }
 }
