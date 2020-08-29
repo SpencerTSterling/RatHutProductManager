@@ -111,5 +111,29 @@ namespace RatHutProductManager
                 return products;
             }
         }
+
+        public static List<Product> SortByNewestProducts()
+        {
+            using(ProductContext context = new ProductContext())
+            {
+                List<Product> products =
+                    (from prod in context.Products
+                     orderby prod.ProductId descending
+                     select prod).ToList();
+                return products;
+            }
+        }
+
+        public static List<Product> SortByOldestProducts()
+        {
+            using(ProductContext context = new ProductContext())
+            {
+                List<Product> products =
+                    (from prod in context.Products
+                     orderby prod.ProductId ascending
+                     select prod).ToList();
+                return products;
+            }
+        }
     }
 }
