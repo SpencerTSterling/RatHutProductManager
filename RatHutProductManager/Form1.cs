@@ -135,10 +135,14 @@ namespace RatHutProductManager
                 // oldest to newest products (default)
                 case 0:
                     // call method
+                    products = ProductDb.SortByOldestProducts();
+                    RepopulateListBox(products);
                     break;
                 // newest to oldest products
                 case 1:
                     // call method
+                    products = ProductDb.SortByNewestProducts();
+                    RepopulateListBox(products);
                     break;
                 // lowest to highest price
                 case 2:
