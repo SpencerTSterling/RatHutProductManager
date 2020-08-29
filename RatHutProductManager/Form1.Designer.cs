@@ -138,7 +138,7 @@ namespace RatHutProductManager
             this.DdSortByCategory.Name = "DdSortByCategory";
             this.DdSortByCategory.Size = new System.Drawing.Size(160, 21);
             this.DdSortByCategory.TabIndex = 8;
-            this.DdSortByCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.DdSortByCategory.SelectedIndexChanged += new System.EventHandler(this.DdSortByCategory_SelectedIndexChanged);
             // 
             // Form1
             // 
