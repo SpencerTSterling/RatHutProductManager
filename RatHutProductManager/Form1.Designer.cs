@@ -36,6 +36,8 @@ namespace RatHutProductManager
             this.BtnDeleteProduct = new System.Windows.Forms.Button();
             this.DdSortByCondition = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.DdSortByCategory = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LbProducts
@@ -111,11 +113,39 @@ namespace RatHutProductManager
             this.label2.TabIndex = 6;
             this.label2.Text = "Sort By Condition:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(155, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Sort By Category:";
+            // 
+            // DdSortByCategory
+            // 
+            this.DdSortByCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DdSortByCategory.FormattingEnabled = true;
+            this.DdSortByCategory.Items.AddRange(new object[] {
+            "Burgers",
+            "Chicken/Sandwiches",
+            "Breakfast",
+            "Sides",
+            "Dessert",
+            "Misc"});
+            this.DdSortByCategory.Location = new System.Drawing.Point(155, 90);
+            this.DdSortByCategory.Name = "DdSortByCategory";
+            this.DdSortByCategory.Size = new System.Drawing.Size(160, 21);
+            this.DdSortByCategory.TabIndex = 8;
+            this.DdSortByCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 284);
+            this.Controls.Add(this.DdSortByCategory);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DdSortByCondition);
             this.Controls.Add(this.BtnDeleteProduct);
@@ -140,6 +170,8 @@ namespace RatHutProductManager
         private Button BtnDeleteProduct;
         private ComboBox DdSortByCondition;
         private Label label2;
+        private Label label3;
+        private ComboBox DdSortByCategory;
     }
 }
 

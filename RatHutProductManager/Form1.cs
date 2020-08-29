@@ -117,5 +117,10 @@ namespace RatHutProductManager
         {
             throw new NotImplementedException();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
