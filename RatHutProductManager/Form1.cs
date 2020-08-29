@@ -143,6 +143,8 @@ namespace RatHutProductManager
                 // lowest to highest price
                 case 2:
                     // call method
+                    products = ProductDb.SortLowestToHighestPrice();
+                    RepopulateListBox(products);
                     break;
                 // highest to lowest price
                 case 3:

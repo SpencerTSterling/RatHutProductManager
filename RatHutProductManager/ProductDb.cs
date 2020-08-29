@@ -99,5 +99,17 @@ namespace RatHutProductManager
                 return products;
             }
         }
+
+        public static List<Product> SortLowestToHighestPrice()
+        {
+            using(ProductContext context = new ProductContext())
+            {
+                List<Product> products =
+                (from prod in context.Products
+                 orderby prod.Price ascending
+                 select prod).ToList();
+                return products;
+            }
+        }
     }
 }
