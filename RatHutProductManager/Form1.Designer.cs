@@ -34,6 +34,8 @@ namespace RatHutProductManager
             this.BtnAddProduct = new System.Windows.Forms.Button();
             this.BtnUpdateProduct = new System.Windows.Forms.Button();
             this.BtnDeleteProduct = new System.Windows.Forms.Button();
+            this.DdSortByCondition = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LbProducts
@@ -41,7 +43,7 @@ namespace RatHutProductManager
             this.LbProducts.FormattingEnabled = true;
             this.LbProducts.Location = new System.Drawing.Point(12, 29);
             this.LbProducts.Name = "LbProducts";
-            this.LbProducts.Size = new System.Drawing.Size(137, 186);
+            this.LbProducts.Size = new System.Drawing.Size(137, 251);
             this.LbProducts.TabIndex = 0;
             this.LbProducts.SelectedIndexChanged += new System.EventHandler(this.LbProducts_SelectedIndexChanged);
             // 
@@ -56,7 +58,7 @@ namespace RatHutProductManager
             // 
             // BtnAddProduct
             // 
-            this.BtnAddProduct.Location = new System.Drawing.Point(156, 29);
+            this.BtnAddProduct.Location = new System.Drawing.Point(156, 140);
             this.BtnAddProduct.Name = "BtnAddProduct";
             this.BtnAddProduct.Size = new System.Drawing.Size(105, 40);
             this.BtnAddProduct.TabIndex = 2;
@@ -66,7 +68,7 @@ namespace RatHutProductManager
             // 
             // BtnUpdateProduct
             // 
-            this.BtnUpdateProduct.Location = new System.Drawing.Point(155, 75);
+            this.BtnUpdateProduct.Location = new System.Drawing.Point(156, 186);
             this.BtnUpdateProduct.Name = "BtnUpdateProduct";
             this.BtnUpdateProduct.Size = new System.Drawing.Size(105, 40);
             this.BtnUpdateProduct.TabIndex = 3;
@@ -76,7 +78,7 @@ namespace RatHutProductManager
             // 
             // BtnDeleteProduct
             // 
-            this.BtnDeleteProduct.Location = new System.Drawing.Point(156, 121);
+            this.BtnDeleteProduct.Location = new System.Drawing.Point(156, 232);
             this.BtnDeleteProduct.Name = "BtnDeleteProduct";
             this.BtnDeleteProduct.Size = new System.Drawing.Size(105, 40);
             this.BtnDeleteProduct.TabIndex = 4;
@@ -84,11 +86,38 @@ namespace RatHutProductManager
             this.BtnDeleteProduct.UseVisualStyleBackColor = true;
             this.BtnDeleteProduct.Click += new System.EventHandler(this.BtnDeleteProduct_Click);
             // 
+            // DdSortByCondition
+            // 
+            this.DdSortByCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DdSortByCondition.FormattingEnabled = true;
+            this.DdSortByCondition.Items.AddRange(new object[] {
+            "Oldest to Newest products",
+            "Newest to Oldest products",
+            "Lowest to highest price",
+            "Highest to lowest price",
+            "Alphabetical"});
+            this.DdSortByCondition.Location = new System.Drawing.Point(155, 45);
+            this.DdSortByCondition.Name = "DdSortByCondition";
+            this.DdSortByCondition.Size = new System.Drawing.Size(160, 21);
+            this.DdSortByCondition.TabIndex = 5;
+            this.DdSortByCondition.SelectedIndexChanged += new System.EventHandler(this.DdSortByCondition_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(155, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Sort By Condition:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 234);
+            this.ClientSize = new System.Drawing.Size(328, 284);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DdSortByCondition);
             this.Controls.Add(this.BtnDeleteProduct);
             this.Controls.Add(this.BtnUpdateProduct);
             this.Controls.Add(this.BtnAddProduct);
@@ -109,6 +138,8 @@ namespace RatHutProductManager
         private Button BtnAddProduct;
         private Button BtnUpdateProduct;
         private Button BtnDeleteProduct;
+        private ComboBox DdSortByCondition;
+        private Label label2;
     }
 }
 

@@ -112,5 +112,10 @@ namespace RatHutProductManager
         {
 
         }
+
+        private void DdSortByCondition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
