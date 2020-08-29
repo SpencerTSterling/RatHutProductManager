@@ -129,7 +129,7 @@ namespace RatHutProductManager
         {
             // get the condition selected 
             int selectedIndex = DdSortByCondition.SelectedIndex;
-
+            List<Product> products = new List<Product>();
             switch (selectedIndex)
             {
                 // oldest to newest products (default)
@@ -147,15 +147,19 @@ namespace RatHutProductManager
                 // highest to lowest price
                 case 3:
                     // call method
+                    products = ProductDb.SortHighestToLowestPrice();
+                    RepopulateListBox(products);
                     break;
                 // alphabetical
                 case 4:
                     // call method
-                    List<Product> products = ProductDb.SortAlphabetically();
+                    products = ProductDb.SortAlphabetically();
                     RepopulateListBox(products);
                     break;
 
             }
+            // Changes the category selected to All 
+           // DdSortByCategory.SelectedIndex = 0;
             
         }
 
