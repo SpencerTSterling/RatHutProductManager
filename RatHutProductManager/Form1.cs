@@ -115,7 +115,34 @@ namespace RatHutProductManager
 
         private void DdSortByCondition_SelectedIndexChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // get the condition selected 
+            int selectedIndex = DdSortByCondition.SelectedIndex;
+
+            switch (selectedIndex)
+            {
+                // oldest to newest products (default)
+                case 0:
+                    // call method
+                    break;
+                // newest to oldest products
+                case 1:
+                    // call method
+                    break;
+                // lowest to highest price
+                case 2:
+                    // call method
+                    break;
+                // highest to lowest price
+                case 3:
+                    // call method
+                    break;
+                // alphabetical
+                case 4:
+                    // call method
+                    break;
+
+            }
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
