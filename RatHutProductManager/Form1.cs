@@ -116,7 +116,7 @@ namespace RatHutProductManager
             //p.Price = 15.00;
             //ProductDb.Update(p);
 
-         
+
 
         }
 
@@ -166,6 +166,20 @@ namespace RatHutProductManager
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private List<Product> GetListBoxItems()
+        {
+            List<Product> products = new List<Product>();
+            int size = LbProducts.Items.Count;
+            for (int i = 0; i < size; i++)
+            {
+                LbProducts.SetSelected(i, true);
+                products.Add(LbProducts.SelectedItem as Product);
+            }
+            LbProducts.SetSelected(size - 1, false);
+
+            return products;
         }
     }
 }
