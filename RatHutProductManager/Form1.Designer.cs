@@ -127,6 +127,7 @@ namespace RatHutProductManager
             this.DdSortByCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DdSortByCategory.FormattingEnabled = true;
             this.DdSortByCategory.Items.AddRange(new object[] {
+            "All",
             "Burgers",
             "Chicken/Sandwiches",
             "Breakfast",
