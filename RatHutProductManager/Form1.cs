@@ -136,57 +136,76 @@ namespace RatHutProductManager
                 case 0:
                     // call method
                     products = ProductDb.SortByOldestProducts();
+                    products = SortCategory(products);
                     RepopulateListBox(products);
                     break;
                 // newest to oldest products
                 case 1:
                     // call method
                     products = ProductDb.SortByNewestProducts();
+                    products = SortCategory(products);
                     RepopulateListBox(products);
                     break;
                 // lowest to highest price
                 case 2:
                     // call method
                     products = ProductDb.SortLowestToHighestPrice();
+                    products = SortCategory(products);
                     RepopulateListBox(products);
                     break;
                 // highest to lowest price
                 case 3:
                     // call method
                     products = ProductDb.SortHighestToLowestPrice();
+                    products = SortCategory(products);
                     RepopulateListBox(products);
                     break;
                 // alphabetical
                 case 4:
                     // call method
                     products = ProductDb.SortAlphabetically();
+                    products = SortCategory(products);
+                    RepopulateListBox(products);
+                    break;
+                default:
+                    products = ProductDb.SortByOldestProducts();
+                    products = SortCategory(products);
                     RepopulateListBox(products);
                     break;
 
             }
-            // Changes the category selected to All 
-           // DdSortByCategory.SelectedIndex = 0;
             
         }
 
         private void DdSortByCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             DdSortByCondition_SelectedIndexChanged(sender, e);
+            List<Product> products = GetListBoxItems();
+            List<Product> pSorted = SortCategory(products);
+            RepopulateListBox(pSorted);
+        }
+
+        /// <summary>
+        /// Repopulates the listbox with items of the selected category
+        /// </summary>
+        private List<Product> SortCategory(List<Product> products)
+        {
             //Runs if item selected is ALL
-            if (DdSortByCategory.SelectedIndex != 0) {
-                List<Product> products = GetListBoxItems();
+            if (DdSortByCategory.SelectedIndex != 0 && DdSortByCategory.SelectedItem != null)
+            {
                 List<Product> pSorted = new List<Product>();
                 string category = DdSortByCategory.SelectedItem as string;
                 int size = products.Count();
-                for (int i = 0; i < size - 1; i++)
+                for (int i = 0; i < size; i++)
                 {
                     if (products[i].Category.Equals(category))
                     {
                         pSorted.Add(products[i]);
                     }
                 }
-                RepopulateListBox(pSorted);
+                return pSorted;
             }
+            return products;
         }
 
         private List<Product> GetListBoxItems()
@@ -198,7 +217,10 @@ namespace RatHutProductManager
                 LbProducts.SetSelected(i, true);
                 products.Add(LbProducts.SelectedItem as Product);
             }
-            LbProducts.SetSelected(size - 1, false);
+            if (size < 0)
+            {
+                LbProducts.SetSelected(size - 1, false);
+            }
 
             return products;
         }
