@@ -21,7 +21,7 @@ namespace RatHutProductManager
         {
             AddAndUpdateForm addForm = new AddAndUpdateForm();
             addForm.ShowDialog();
-            RepopulateListBox();
+            DdSortByCondition_SelectedIndexChanged(sender, e);
 
         }
 
@@ -57,7 +57,7 @@ namespace RatHutProductManager
             Product selPro = LbProducts.SelectedItem as Product;
             var updateFrm = new AddAndUpdateForm(selPro);
             updateFrm.ShowDialog();
-            RepopulateListBox();
+            DdSortByCondition_SelectedIndexChanged(sender, e);
         }
 
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
